@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+
+    /* icy gradient background */
+    background: linear-gradient(135deg, #dff6ff, #b5e3ff, #eaf9ff);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+/* ========== MAIN CONTAINER ========== */
+.todo-container {
+    width: 380px;
+    padding: 25px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+
+    backdrop-filter: blur(8px);
+
+    text-align: center;
+}
+
+
+/* ========== TITLE ========== */
+h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+
+    color: #1b1b1b;
+}
+
+h1::after {
+    content: " 🐧";
+}
+
+
+/* ========== INPUT AREA ========== */
+.input-area {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#todo-input {
+    flex: 1;
+    padding: 10px 12px;
+
+    border-radius: 15px;
+    border: none;
+
+    background: #f0fbff;
+    outline: none;
+
+    font-size: 14px;
+}
+
+
+/* ========== ADD BUTTON ========== */
+#add-btn {
+    padding: 10px 16px;
+
+    border-radius: 15px;
+    border: none;
+
+    background: #ff8c42; /* penguin beak orange */
+    color: white;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#add-btn:hover {
+    transform: scale(1.05);
+    background: #ff7420;
+}
+
+
+/* ========== LIST ========== */
+#todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* ========== TODO ITEM ========== */
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ffffff;
+
+    padding: 10px 12px;
+    margin-bottom: 10px;
+
+    border-radius: 14px;
+
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+
+    transition: 0.2s;
+}
+
+li:hover {
+    transform: translateY(-2px);
+}
+
+
+/* ========== CHECKBOX ========== */
+li input[type="checkbox"] {
+    transform: scale(1.2);
+    accent-color: #000000; /* penguin black */
+}
+
+
+/* ========== TEXT ========== */
+li span {
+    flex: 1;
+    text-align: left;
+    margin: 0 10px;
+    color: #333;
+}
+
+
+/* ========== DELETE BUTTON ========== */
+li button {
+    background: #222;
+    color: white;
+
+    border: none;
+    padding: 6px 10px;
+
+    border-radius: 10px;
+    cursor: pointer;
+
+    font-size: 12px;
+    transition: 0.2s;
+}
+
+li button:hover {
+    background: #444;
+}
+
+
+/* ========== CUTE PENGUIN FOOTER ========== */
+.todo-container::after {
+    content: "❄ Stay chill & get things done ❄";
+    display: block;
+    margin-top: 15px;
+    font-size: 12px;
+    color: #6a6a6a;
+}
